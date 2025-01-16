@@ -1,0 +1,95 @@
+.header {
+  font-family: 'Press Start 2P', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  background: linear-gradient(
+    to right,
+    #fffacd,
+    #fafad2,
+    #ffebcd
+  ); // Gradient liniar similar cu banner-ul
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid black; // Linie sub header
+  .logo-container {
+    .logo {
+      height: 50px;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .nav-list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      padding: 0;
+    
+      .nav-item {
+        position: relative;
+        margin-left: 20px;
+    
+        .nav-link {
+          text-decoration: none;
+          color: #333;
+          font-size: 20px;
+          font-weight: 500;
+          padding: 10px;
+          transition: color 0.3s;
+          line-height: 1.5; // Ajustează înălțimea liniei pentru a lăsa textul mai jos
+    
+          &:hover {
+            color: #007bff; /* Schimbă culoarea în albastru */
+            text-decoration: underline;
+            transform: scale(1.4);
+            transition: all 0.3s ease-in-out;
+          }
+    
+          i {
+            margin-right: 5px;
+            vertical-align: middle; // Aliniază iconițele la mijlocul textului
+            position: relative;
+            top: -2px; // Ridică iconițele puțin mai sus
+          }
+        }
+    
+        &.dropdown {
+          .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            margin: 0;
+            padding: 10px 0;
+            border-radius: 4px;
+            z-index: 9999;
+            .dropdown-item {
+              padding: 10px 20px;
+              text-decoration: none;
+              color: #333;
+              display: block;
+              transition: background-color 0.3s;
+              z-index: 9999;
+              &:hover {
+                background-color: #f8f9fa;
+                transform: scale(1.2);
+                transition: all 0.3s ease-in-out;
+                z-index: 9999;
+              }
+            }
+          }
+    
+          &:hover .dropdown-menu {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

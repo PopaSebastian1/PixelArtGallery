@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="container">
+  <div class="artwork-details" *ngIf="artwork">
+    <!-- Titlul lucrării -->
+    <div class="title">
+      <h1>{{ artwork.name }}</h1>
+    </div>
+
+    <div class="content">
+      <!-- Imaginea lucrării -->
+      <div class="left-column">
+        <img [src]="artwork.imagePath" alt="{{ artwork.name }}">
+      </div>
+
+      <!-- Detalii și descriere -->
+      <div class="right-column">
+        <p class="author"><strong>Author:</strong> {{ artwork.author }}</p>
+        <p class="category"><strong>Category:</strong> {{ artwork.category }}</p>
+        <p class="description"><strong>Description:</strong> {{ artwork.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

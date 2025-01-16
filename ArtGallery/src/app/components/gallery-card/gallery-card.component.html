@@ -1,0 +1,15 @@
+<div class="gallery-card" (click)="goToArtworkDetails()">
+    <div class="gallery-card-inner">
+      <div class="gallery-card-front">
+        <img [src]="image" alt="{{ title }}" class="gallery-card-image">
+        <div class="gallery-card-content">
+          <h3 class="gallery-card-title">{{ title }}</h3>
+          <p class="gallery-card-author">Author: {{ author }}</p>
+        </div>
+      </div>
+      <div class="gallery-card-back">
+        <p class="gallery-card-description">{{ description }}</p>
+      </div>
+    </div>
+  </div>
+  

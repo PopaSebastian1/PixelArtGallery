@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="container">
+  <div class="gallery">
+    <app-gallery-card
+      *ngFor="let artwork of artworks"
+      (click)="viewDetails(artwork)"
+      [image]="artwork.imagePath"
+      [title]="artwork.name"
+      [author]="artwork.author"
+      [category]="artwork.category"
+      [description]="artwork.description"
+      [id]="artwork.id">
+    </app-gallery-card>
+  </div>
+</div>
+
+<div class="add-button">
+  <button (click)="openAddArtworkDialog()">Add New Artwork</button>
+</div>

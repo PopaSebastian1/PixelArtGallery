@@ -1,0 +1,193 @@
+@keyframes borderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.login-form {
+    font-family: 'Poppins', sans-serif;
+    max-width: 400px;
+    height: 30em;
+    width: 20em;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);  
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    border: 3px solid black;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    .login-form-header
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 10px;
+            border-radius: 30%;
+    }
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+
+        span {
+            display: inline-block;
+            animation: bounce 1s infinite ;
+            animation-delay: calc(0.1s * var(--i));
+        }
+
+        .space {
+            width: 10px; 
+        }
+        span:nth-child(1) { --i: 0; }
+        span:nth-child(2) { --i: 1; }
+        span:nth-child(3) { --i: 2; }
+        span:nth-child(4) { --i: 3; }
+        span:nth-child(5) { --i: 4; }
+        span:nth-child(6) { --i: 5; }
+        span:nth-child(7) { --i: 6; }
+        span:nth-child(8) { --i: 7; }
+        span:nth-child(9) { --i: 8; }
+        span:nth-child(10) { --i: 9; }
+        span:nth-child(11) { --i: 10; }
+        span:nth-child(12) { --i: 11; }
+    }
+
+
+    .form-group {
+        margin-bottom: 15px;
+
+        label {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            margin-left: 14px;
+            display: block;
+            color: rgb(225, 224, 224);
+        }
+
+        
+        .input-group {
+            position: relative;
+            .left-side {
+                position: absolute;
+                left: 10px;
+                top: 49%;
+                font-size: 16px;
+                transform: translateY(-50%);
+                margin-left: 1em;
+                color: rgb(225, 224, 224)
+            }
+          
+            .form-control {
+                width: 70%;
+                padding: 10px 10px 10px 30px;
+                font-size: 16px;
+                border: 1px solid rgb(225, 224, 224);
+                color: rgb(225, 224, 224);
+                border-radius: 30px;
+                margin-left: 1em;
+
+                background-color: transparent;
+                &::placeholder {
+                    color: rgb(225, 224, 224); // Setează culoarea textului din placeholder la negru
+                }
+                &:focus {
+                    border-color: #f0e68c; // Setează culoarea border-ului la focus
+                    outline: none; // Elimină stilul implicit de outline
+                    background-color: transparent;
+                }
+            }
+            
+
+            .right-side {
+                position: absolute;
+                right: 0px;
+                top: 50%;
+                left:75%;
+                transform: translateY(-50%);
+                cursor: pointer;
+            color: rgb(225, 224, 224)
+
+            }
+
+            .error {
+                color: red;
+                font-size: 12px;
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .page-redirect {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+        .left-link {
+            font-size: 16px;
+            color: #007bff;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .buttons {
+        text-align: center;
+    
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            background: linear-gradient(to right,    #f0e68c 50%, white 50%); // Culoare galben pal
+            background-size: 200% 100%;
+            background-position: right bottom;
+            color: #f0e68c; // Culoare galben pal
+            transition: all 0.3s ease;
+    
+            &:hover {
+                background-position: left bottom;
+                color: white;
+            }
+    
+            &.btn-primary {
+                &:disabled {
+                    background-color: #ccc;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}
