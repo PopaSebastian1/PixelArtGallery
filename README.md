@@ -1,6 +1,5 @@
 # Pixel Art Gallery
-
-![Pixel Art Gallery Preview](link-to-screenshot.png)  
+ 
 *A web-based pixel art gallery built with Angular and ASP.NET Core.*
 
 ## 🚀 Features
